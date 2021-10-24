@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+$bright-orange: hsl(31, 77%, 52%);
+$dark-cyan: hsl(184, 100%, 22%);
+$very-dark-cyan: hsl(179, 100%, 13%);
+$transparent-white: hsla(0, 0%, 100%, 0.75); // paragraphs
+$very-light-gray: hsl(0, 0%, 95%); // background-headings-buttons
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100vh;
+  background-color: $very-light-gray;
+}
+
+.cards-container {
+  width: 880px;
+  display: flex;
+  margin-bottom: 13rem;
+
+  .sedan {
+    background-color: $bright-orange;
+    border-radius: 0.6rem 0 0 0.6rem;
+
+    button {
+      color: $bright-orange;
+    }
+  }
+
+  .suvs {
+    background-color: $dark-cyan;
+
+    button {
+      color: $dark-cyan;
+    }
+  }
+
+  .luxury {
+    background-color: $very-dark-cyan;
+    border-radius: 0 0.6rem 0.6rem 0;
+
+    button {
+      color: $very-dark-cyan;
+    }
+  }
+
+  .card {
+    padding: 3.55rem;
+
+    h2 {
+      font-family: "Big Shoulders Display", cursive;
+      font-size: 2.2rem;
+      text-transform: uppercase;
+      margin: 2rem 0;
+      color: $very-light-gray;
+    }
+
+    p {
+      color: $transparent-white;
+      font-size: 0.9rem;
+      margin-bottom: 5.2rem;
+      line-height: 1.5rem;
+    }
+
+    .button {
+      width: 135px;
+      height: 45px;
+      background: $very-light-gray;
+      border: 2px solid $very-light-gray;
+      border-radius: 1.8rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: transparent;
+        color: $very-light-gray;
+        transition: all 0.3s;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 881px) {
+  body {
+    align-items: center;
+    height: auto;
+  }
+
+  .cards-container {
+    width: 280px;
+    flex-direction: column;
+    margin: 2rem;
+
+    .card {
+      padding: 2.6rem;
+
+      p {
+        font-size: 0.9rem;
+        margin-bottom: 1.6rem;
+      }
+    }
+
+    .sedan {
+      border-radius: 0.6rem 0.6rem 0 0;
+    }
+
+    .luxury {
+      border-radius: 0 0 0.6rem 0.6rem;
+    }
+  }
+}
